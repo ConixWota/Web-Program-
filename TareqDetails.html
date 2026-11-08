@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tareq Miazi | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.55);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .glow {
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.12);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-7px);
+            border-color: rgba(56, 189, 248, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-[#080d1a] text-white">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-[#080d1a]/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <a href="#home" class="text-2xl font-extrabold tracking-tight">
+                TAREK<span class="text-sky-400">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+                <a href="#home" class="hover:text-sky-400 transition">Home</a>
+                <a href="#about" class="hover:text-sky-400 transition">About</a>
+                <a href="#education" class="hover:text-sky-400 transition">Education</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#activities" class="hover:text-sky-400 transition">Activities</a>
+            </div>
+
+            <a href="#contact"
+               class="hidden sm:block bg-sky-400 text-slate-950 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-sky-300 transition">
+                Let's Connect ↗
+            </a>
+
+            <button id="menuBtn"
+                    class="md:hidden text-2xl text-sky-400"
+                    aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-5 space-y-4 text-slate-300">
+            <a href="#home" class="block">Home</a>
+            <a href="#about" class="block">About</a>
+            <a href="#education" class="block">Education</a>
+            <a href="#skills" class="block">Skills</a>
+            <a href="#family" class="block">Family</a>
+            <a href="#activities" class="block">Activities</a>
+            <a href="#contact" class="block">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden min-h-[90vh] flex items-center">
+
+        <!-- Background Effects -->
+        <div class="absolute -top-32 -right-20 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-sky-500/10 blur-[120px] rounded-full"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+
+            <div>
+                <div class="inline-flex items-center gap-2 border border-sky-400/30 bg-sky-400/10 px-4 py-2 rounded-full text-sky-300 text-sm mb-8">
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                    Welcome to my personal portfolio
+                </div>
+
+                <p class="text-slate-400 text-lg mb-3">Hello, I'm</p>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+                    Tareq <br>
+                    <span class="gradient-text">Miazi.</span>
+                </h1>
+
+                <h2 class="text-xl md:text-2xl font-semibold text-slate-300 mt-6">
+                    CCE Student <span class="text-sky-400">@ IIUC</span>
+                </h2>
+
+                <p class="text-slate-400 leading-8 mt-6 max-w-lg">
+                    I am an enthusiastic engineering student passionate about
+                    programming, technology and innovation. I enjoy exploring
+                    new ideas and developing my technical skills.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-9">
+                    <a href="#about"
+                       class="bg-sky-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl hover:bg-sky-300 transition">
+                        Explore My Profile →
+                    </a>
+
+                    <a href="#skills"
+                       class="border border-slate-600 px-7 py-3.5 rounded-xl hover:border-sky-400 hover:text-sky-400 transition">
+                        My Skills
+                    </a>
+                </div>
+
+                <div class="flex gap-10 mt-14 border-t border-white/10 pt-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">CCE</h3>
+                        <p class="text-sm text-slate-500 mt-1">Department</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">IIUC</h3>
+                        <p class="text-sm text-slate-500 mt-1">University</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">01</h3>
+                        <p class="text-sm text-slate-500 mt-1">Big Dream</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE CARD -->
+            <div class="flex justify-center">
+                <div class="relative w-full max-w-sm">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-[2rem] rotate-6 opacity-30 blur-sm"></div>
+
+                    <div class="relative glass rounded-[2rem] p-7 glow">
+
+                        <div class="flex justify-between items-center mb-8">
+                            <span class="text-xs tracking-[3px] text-sky-300 font-semibold">
+                                PERSONAL PROFILE
+                            </span>
+                            <span class="text-sky-400">✦</span>
+                        </div>
+
+                        <div class="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-sky-400 to-indigo-600 p-1.5">
+                            <div class="w-full h-full rounded-full bg-[#101a30] flex items-center justify-center">
+                                <span class="text-6xl font-extrabold gradient-text">TM</span>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-center mt-6">
+                            Tareq Miazi
+                        </h2>
+
+                        <p class="text-center text-sky-300 mt-2 text-sm">
+                            Computer & Communication Engineering
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-3 mt-8">
+                            <div class="bg-slate-800/70 rounded-xl p-4 text-center">
+                                <p class="text-xs text-slate-400">University</p>
+                                <p class="font-bold mt-1">IIUC</p>
+                            </div>
+
+                            <div class="bg-slate-800/70 rounded-xl p-4 text-center">
+                                <p class="text-xs text-slate-400">Department</p>
+                                <p class="font-bold mt-1">CCE</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center text-sm text-slate-400">
+                            Aspiring Software Engineer
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section id="about" class="py-24 bg-[#0c1425]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">Discover My Story</p>
+                <h2 class="text-4xl font-extrabold mt-4">About <span class="gradient-text">Me</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <div class="glass rounded-3xl p-8 md:p-10">
+                    <span class="text-5xl text-sky-400">“</span>
+
+                    <p class="text-slate-300 leading-8 text-lg mt-2">
+                        My name is Tareq Miazi. I am currently studying
+                        Computer and Communication Engineering at
+                        International Islamic University Chittagong.
+
+                        I have a strong interest in programming and
+                        technology. I believe in continuous learning,
+                        creativity and personal development.
+                    </p>
+
+                    <div class="mt-8 border-t border-white/10 pt-6">
+                        <h3 class="font-bold text-xl">Tareq Miazi</h3>
+                        <p class="text-slate-500 text-sm mt-1">Engineering Student</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <span class="text-3xl">🎓</span>
+                        <h3 class="text-xl font-bold mt-4">Student</h3>
+                        <p class="text-slate-400 text-sm mt-2">University Level</p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <span class="text-3xl">💻</span>
+                        <h3 class="text-xl font-bold mt-4">Technology</h3>
+                        <p class="text-slate-400 text-sm mt-2">Programming Interest</p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <span class="text-3xl">🌍</span>
+                        <h3 class="text-xl font-bold mt-4">Explorer</h3>
+                        <p class="text-slate-400 text-sm mt-2">Love Travelling</p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <span class="text-3xl">🎯</span>
+                        <h3 class="text-xl font-bold mt-4">Goal</h3>
+                        <p class="text-slate-400 text-sm mt-2">Software Engineer</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">My Academic Journey</p>
+                <h2 class="text-4xl font-extrabold mt-4">Education</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto relative border-l-2 border-sky-400/40 ml-4 md:ml-auto md:pl-10 pl-8">
+
+                <div class="relative glass rounded-2xl p-8 card-hover">
+                    <div class="absolute -left-[42px] top-9 w-5 h-5 bg-sky-400 rounded-full border-4 border-[#080d1a]"></div>
+
+                    <span class="text-sky-400 text-sm font-semibold">CURRENT EDUCATION</span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+                        International Islamic University Chittagong
+                    </h3>
+
+                    <p class="text-slate-300 mt-3">
+                        B.Sc. in Computer and Communication Engineering (CCE)
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-4">
+                        Currently pursuing my engineering education and
+                        developing knowledge in computing and communication.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-[#0c1425]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">What I Am Learning</p>
+                <h2 class="text-4xl font-extrabold mt-4">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="text-slate-400 mt-4">My current programming and web development skills.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- C -->
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-extrabold text-sky-400">C</span>
+                        <span class="text-sky-300 font-bold">70%</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-5">C Programming</h3>
+                    <p class="text-slate-400 text-sm mt-2">Programming Fundamentals</p>
+                    <div class="w-full h-2 bg-slate-700 rounded-full mt-6">
+                        <div class="w-[70%] h-full bg-sky-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- C++ -->
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-extrabold text-sky-400">C++</span>
+                        <span class="text-sky-300 font-bold">50%</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-5">C++ Programming</h3>
+                    <p class="text-slate-400 text-sm mt-2">Object-Oriented Programming</p>
+                    <div class="w-full h-2 bg-slate-700 rounded-full mt-6">
+                        <div class="w-[50%] h-full bg-sky-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-extrabold text-orange-400">5</span>
+                        <span class="text-sky-300 font-bold">Learning</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-5">HTML5</h3>
+                    <p class="text-slate-400 text-sm mt-2">Web Page Structure</p>
+                    <div class="w-full h-2 bg-slate-700 rounded-full mt-6">
+                        <div class="w-[65%] h-full bg-orange-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-extrabold text-blue-400">#</span>
+                        <span class="text-sky-300 font-bold">Learning</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-5">CSS</h3>
+                    <p class="text-slate-400 text-sm mt-2">Web Styling</p>
+                    <div class="w-full h-2 bg-slate-700 rounded-full mt-6">
+                        <div class="w-[60%] h-full bg-blue-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Tailwind -->
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-extrabold text-cyan-400">TW</span>
+                        <span class="text-sky-300 font-bold">Learning</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-5">Tailwind CSS</h3>
+                    <p class="text-slate-400 text-sm mt-2">Utility-First CSS Framework</p>
+                    <div class="w-full h-2 bg-slate-700 rounded-full mt-6">
+                        <div class="w-[50%] h-full bg-cyan-400 rounded-full"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-center text-slate-500 text-xs mt-8">
+                Skill levels are self-assessments and can be updated as I learn.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FAMILY -->
+    <section id="family" class="py-24">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">My Loved Ones</p>
+                <h2 class="text-4xl font-extrabold mt-4">My <span class="gradient-text">Family</span></h2>
+                <p class="text-slate-400 mt-4">My family is an important part of my life.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-5xl mb-4">👨</div>
+                    <h3 class="font-bold">Father</h3>
+                    <p class="text-slate-500 text-xs mt-2">Add Father's Name</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-5xl mb-4">👩</div>
+                    <h3 class="font-bold">Mother</h3>
+                    <p class="text-slate-500 text-xs mt-2">Add Mother's Name</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-5xl mb-4">👦</div>
+                    <h3 class="font-bold">Brother</h3>
+                    <p class="text-slate-500 text-xs mt-2">Add Brother's Name</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-5xl mb-4">👧</div>
+                    <h3 class="font-bold">Sister</h3>
+                    <p class="text-slate-500 text-xs mt-2">Add Sister's Name</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="py-24 bg-[#0c1425]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">Things I Enjoy</p>
+                <h2 class="text-4xl font-extrabold mt-4">My <span class="gradient-text">Hobbies</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
+
+                <div class="relative overflow-hidden rounded-3xl min-h-64 bg-gradient-to-br from-blue-900 to-slate-900 p-9 card-hover">
+                    <div class="absolute right-5 bottom-0 text-8xl opacity-20">🌍</div>
+                    <span class="text-4xl">✈️</span>
+                    <h3 class="text-2xl font-bold mt-7">Travelling</h3>
+                    <p class="text-slate-300 leading-7 mt-3 max-w-xs">
+                        I love exploring new places, experiencing different
+                        cultures and discovering the beauty of nature.
+                    </p>
+                </div>
+
+                <div class="relative overflow-hidden rounded-3xl min-h-64 bg-gradient-to-br from-indigo-900 to-slate-900 p-9 card-hover">
+                    <div class="absolute right-5 bottom-0 text-8xl opacity-20">🏃</div>
+                    <span class="text-4xl">👟</span>
+                    <h3 class="text-2xl font-bold mt-7">Running</h3>
+                    <p class="text-slate-300 leading-7 mt-3 max-w-xs">
+                        Running is one of my favorite activities.
+                        It helps me develop discipline, consistency and focus.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="py-24">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">Milestones</p>
+                <h2 class="text-4xl font-extrabold mt-4">My <span class="gradient-text">Achievements</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <span class="text-4xl">🏅</span>
+                    <h3 class="text-xl font-bold mt-5">Academic</h3>
+                    <p class="text-slate-400 mt-3 text-sm leading-7">
+                        Add your academic awards, results or certificates here.
+                    </p>
+                </div>
+
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <span class="text-4xl">💻</span>
+                    <h3 class="text-xl font-bold mt-5">Technical</h3>
+                    <p class="text-slate-400 mt-3 text-sm leading-7">
+                        Add your programming contests, projects or technical achievements.
+                    </p>
+                </div>
+
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <span class="text-4xl">🏃</span>
+                    <h3 class="text-xl font-bold mt-5">Personal</h3>
+                    <p class="text-slate-400 mt-3 text-sm leading-7">
+                        Add your running, sports or other personal achievements.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CO-CURRICULAR ACTIVITIES -->
+    <section id="activities" class="py-24 bg-[#0c1425]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">Beyond Academics</p>
+                <h2 class="text-4xl font-extrabold mt-4">Co-curricular <span class="gradient-text">Activities</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="glass p-8 rounded-2xl card-hover">
+                    <span class="text-4xl">💡</span>
+                    <h3 class="font-bold text-xl mt-5">Learning & Exploration</h3>
+                    <p class="text-slate-400 text-sm leading-7 mt-3">
+                        Exploring new technologies and developing creative thinking.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl card-hover">
+                    <span class="text-4xl">🏃</span>
+                    <h3 class="font-bold text-xl mt-5">Fitness & Running</h3>
+                    <p class="text-slate-400 text-sm leading-7 mt-3">
+                        Maintaining an active lifestyle through running and exercise.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl card-hover">
+                    <span class="text-4xl">🌏</span>
+                    <h3 class="font-bold text-xl mt-5">Travel & Discovery</h3>
+                    <p class="text-slate-400 text-sm leading-7 mt-3">
+                        Discovering new places and learning through experiences.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="text-xs text-slate-500 text-center mt-8">
+                Update these cards with your actual participation and activities.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FUTURE GOAL -->
+    <section id="goal" class="py-24">
+
+        <div class="max-w-5xl mx-auto px-6">
+
+            <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 p-10 md:p-16 text-center">
+
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 blur-3xl rounded-full"></div>
+
+                <div class="relative">
+                    <p class="text-blue-100 uppercase tracking-[4px] text-xs font-bold">My Vision</p>
+
+                    <h2 class="text-3xl md:text-5xl font-extrabold mt-5">
+                        My Future Goal
+                    </h2>
+
+                    <div class="text-5xl my-7">🚀</div>
+
+                    <h3 class="text-2xl md:text-3xl font-bold">
+                        Aspiring Software Engineer
+                    </h3>
+
+                    <p class="text-blue-100 leading-8 max-w-2xl mx-auto mt-6">
+                        My ultimate goal is to become a skilled Software Engineer.
+                        I want to build meaningful software, solve real-world
+                        problems and contribute to the world of technology.
+                        I believe that dedication, continuous learning and
+                        hard work will help me achieve this dream.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-[#0c1425]">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <p class="text-sky-400 uppercase tracking-[4px] text-xs font-bold">Get In Touch</p>
+
+            <h2 class="text-4xl font-extrabold mt-4">
+                Thank You For <span class="gradient-text">Visiting!</span>
+            </h2>
+
+            <p class="text-slate-400 mt-6 leading-8">
+                Thank you for taking the time to explore my portfolio.
+                I look forward to learning, growing and creating new things.
+            </p>
+
+            <div class="glass rounded-2xl p-8 mt-10 inline-block w-full max-w-lg">
+
+                <h3 class="text-xl font-bold">Tareq Miazi</h3>
+                <p class="text-sky-400 mt-2">CCE Student | IIUC</p>
+                <p class="text-slate-400 mt-2 text-sm">Aspiring Software Engineer</p>
+
+                <!-- Add your email or social links here -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="py-7 border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <p class="text-slate-400 text-sm">
+                © 2026 <span class="text-sky-400 font-bold">Tareq Miazi</span>.
+                All Rights Reserved.
+            </p>
+
+            <p class="text-slate-600 text-xs mt-2">
+                Designed & Developed using HTML and Tailwind CSS.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- MOBILE MENU JAVASCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
